@@ -1,5 +1,7 @@
 import React, { use } from 'react'
 import { useEffect,useState } from 'react'
+import carlist from './components/carlist.jsx'
+import registar from './components/registar.jsx'
 
 function App() {
   const [cars, setCars] = useState([])
