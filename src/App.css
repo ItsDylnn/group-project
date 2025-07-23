@@ -2,19 +2,25 @@ body {
   margin: 0;
   font-family: Arial, sans-serif;
   background-color: white;
-  color: black;
+  color: #ff7d29;
 }
 
 body.dark {
-  background-color: #121212;
-  color: white;
+  background-color:#353935;
+  color: #ff7d29;
 }
+
 
 .app nav {
   display: flex;
-  gap: 1rem;
-  padding: 1rem;
-  background: #eee;
+  gap: 3rem;
+  padding: 2rem;
+  background: white;
+  align-items: center; 
+}
+.app.dark {
+  color: black;
+  background: #353935;
 }
 
 .toggle-btn {
@@ -63,6 +69,6 @@ button {
   }
 
   .toggle-btn {
-    margin-left: 0;
+
   }
 }
