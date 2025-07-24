@@ -89,6 +89,10 @@ body.dark .form-container {
   border: 1px solid #444;
 }
 
+.logo:hover {
+  filter: drop-shadow(0 0 2em #ffb366aa);
+
+
 input {
   display: block;
   width: 100%;
@@ -103,6 +107,7 @@ body.dark input {
   background-color: #444;
   color: #ffb366;
   border: 1px solid #666;
+
 }
 body.dark input::placeholder {
   color: #d89a4a;
