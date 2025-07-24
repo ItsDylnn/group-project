@@ -6,7 +6,7 @@ export default function RegisterPage() {
 
   const handleRegister = (e) => {
     console.log("Registered:", email)
-  };
+  }
 
   return (
     <div className="form-container">

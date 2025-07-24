@@ -7,7 +7,7 @@ export default function LoginPage() {
 
   const handleSubmit = (e) => {
     fakeLogin(email, password)
-  };
+  }
 
   return (
     <div className="form-container">

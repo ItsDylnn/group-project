@@ -3,7 +3,7 @@ import React from "react"
 const favorites = [
   { id: 1, name: "Tesla", image: "" },
   { id: 2, name: "BMW", image: "" },
-];
+]
 
 export default function FavoritesPage() {
   return (
