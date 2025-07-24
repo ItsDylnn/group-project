@@ -1,9 +1,7 @@
 import React, { useEffect, useState } from "react"
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom"
-import LoginPage from "./pages/LoginPage"
-import RegisterPage from "./pages/RegisterPage"
-import FavoritesPage from "./pages/FavoritesPage"
-import DarkModeToggle from "./components/DarkModeToggle"
+import { BrowserRouter as Router } from "react-router-dom"
+import Navbar from "./components/Navbar"
+import RoutesComponent from "./components/RoutesComponent"
 import "./App.css"
 
 function App() {
@@ -19,22 +17,8 @@ function App() {
   return (
     <Router>
       <div className={`app ${darkMode ? "dark" : ""}`}>
-        <nav className="navbar">
-          <div className="navbar-left">
-            <DarkModeToggle darkMode={darkMode} setDarkMode={setDarkMode} />
-          </div>
-          <div className="navbar-right">
-            <Link to="/">Login</Link>
-            <Link to="/register">Register</Link>
-            <Link to="/favorites">Favorites</Link>
-          </div>
-        </nav>
-
-        <Routes>
-          <Route path="/" element={<LoginPage />} />
-          <Route path="/register" element={<RegisterPage />} />
-          <Route path="/favorites" element={<FavoritesPage />} />
-        </Routes>
+        <Navbar darkMode={darkMode} setDarkMode={setDarkMode} />
+        <RoutesComponent />
       </div>
     </Router>
   )
