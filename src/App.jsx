@@ -1,34 +1,42 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React, { useEffect, useState } from "react"
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom"
+import LoginPage from "./pages/LoginPage"
+import RegisterPage from "./pages/RegisterPage"
+import FavoritesPage from "./pages/FavoritesPage"
+import DarkModeToggle from "./components/DarkModeToggle"
+import "./App.css"
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [darkMode, setDarkMode] = useState(() => {
+    return localStorage.getItem("theme") === "dark"
+  })
+
+  useEffect(() => {
+    document.body.className = darkMode ? "dark" : ""
+    localStorage.setItem("theme", darkMode ? "dark" : "light")
+  }, [darkMode])
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <Router>
+      <div className={`app ${darkMode ? "dark" : ""}`}>
+        <nav className="navbar">
+          <div className="navbar-left">
+            <DarkModeToggle darkMode={darkMode} setDarkMode={setDarkMode} />
+          </div>
+          <div className="navbar-right">
+            <Link to="/">Login</Link>
+            <Link to="/register">Register</Link>
+            <Link to="/favorites">Favorites</Link>
+          </div>
+        </nav>
+
+        <Routes>
+          <Route path="/" element={<LoginPage />} />
+          <Route path="/register" element={<RegisterPage />} />
+          <Route path="/favorites" element={<FavoritesPage />} />
+        </Routes>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    </Router>
   )
 }
 
