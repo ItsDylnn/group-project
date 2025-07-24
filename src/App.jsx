@@ -11,14 +11,14 @@ function App() {
 
   //Fetch cars from the backend api
   useEffect(() => {
-    fetch("api-ninjas.com/api/cars#cars-endpoint")
+    fetch("http://localhost:5000/cars") // The url of the backend api
     .then(res => setCars(res.json()))
     .catch(err => console.error(err))
   },[]);
 
   // Add a new car to the backend api
   const addCar = () => {
-    fetch("api-ninjas.com/api/cars#cars-endpoint"), {
+    fetch("http://localhost:5000/cars"),{ // The url of the backend api
       method: "POST",
       headers: {
         "Content-Type": "application/json"
@@ -29,14 +29,6 @@ function App() {
         pricePerDay
       })
     }
-    .then(res => res.json())
-    .then(data => {
-      setCars([...cars, data]);
-      setName("");
-      setBrand("");
-      setPricePerDay("");
-    })
-    .catch(err => console.error(err));
   }
 
   return (

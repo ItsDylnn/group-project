@@ -1,0 +1,144 @@
+{
+  "cars": [
+    {
+      "id": 1,
+      "make": "Toyota",
+      "model": "Camry",
+      "year": 2021,
+      "description": "A reliable mid-size sedan with great fuel economy."
+    },
+    {
+      "id": 2,
+      "make": "Ford",
+      "model": "Mustang",
+      "year": 2022,
+      "description": "A sporty coupe with strong performance and style."
+    },
+    {
+      "id": 3,
+      "make": "Tesla",
+      "model": "Model S",
+      "year": 2023,
+      "description": "An all-electric luxury sedan with cutting-edge tech."
+    },
+    {
+      "id": 4,
+      "make": "Ferrari",
+      "model": "F90Y",
+      "year": 2021,
+      "description": "A high-performance exotic sports car designed for speed and style."
+    },
+    {
+      "id": 5,
+      "make": "BMW",
+      "model": "M3",
+      "year": 2022,
+      "description": "A high-performance sports sedan with precision engineering."
+    },
+    {
+      "id": 6,
+      "make": "Audi",
+      "model": "A6",
+      "year": 2020,
+      "description": "A premium sedan with advanced tech and a smooth ride."
+    },
+    {
+      "id": 7,
+      "make": "Chevrolet",
+      "model": "Corvette",
+      "year": 2023,
+      "description": "An iconic American sports car with thrilling performance."
+    },
+    {
+      "id": 8,
+      "make": "Hyundai",
+      "model": "Elantra",
+      "year": 2021,
+      "description": "A compact sedan with modern design and great efficiency."
+    },
+    {
+      "id": 9,
+      "make": "Honda",
+      "model": "Accord",
+      "year": 2022,
+      "description": "A dependable midsize car known for comfort and fuel efficiency."
+    },
+    {
+      "id": 10,
+      "make": "Nissan",
+      "model": "Altima",
+      "year": 2020,
+      "description": "A stylish sedan with intelligent all-wheel drive."
+    },
+    {
+      "id": 11,
+      "make": "Mazda",
+      "model": "CX-5",
+      "year": 2023,
+      "description": "A compact SUV that blends performance with practicality."
+    },
+    {
+      "id": 12,
+      "make": "Jeep",
+      "model": "Wrangler",
+      "year": 2021,
+      "description": "An iconic off-roader with rugged design and capability."
+    },
+    {
+      "id": 13,
+      "make": "Subaru",
+      "model": "Outback",
+      "year": 2022,
+      "description": "A versatile crossover with all-wheel drive and great safety features."
+    },
+    {
+      "id": 14,
+      "make": "Kia",
+      "model": "Sorento",
+      "year": 2021,
+      "description": "A midsize SUV offering space and technology at a great value."
+    },
+    {
+      "id": 15,
+      "make": "Volkswagen",
+      "model": "Passat",
+      "year": 2020,
+      "description": "A German-engineered sedan with a spacious interior."
+    },
+    {
+      "id": 16,
+      "make": "Lexus",
+      "model": "RX",
+      "year": 2023,
+      "description": "A luxury SUV known for comfort, tech, and reliability."
+    },
+    {
+      "id": 17,
+      "make": "Porsche",
+      "model": "911",
+      "year": 2023,
+      "description": "A legendary sports car with superb handling and performance."
+    },
+    {
+      "id": 18,
+      "make": "Mercedes-Benz",
+      "model": "C-Class",
+      "year": 2022,
+      "description": "A compact luxury sedan with cutting-edge features."
+    },
+    {
+      "id": 19,
+      "make": "Jaguar",
+      "model": "XE",
+      "year": 2021,
+      "description": "A sleek British sports sedan with agile performance."
+    },
+    {
+      "id": 20,
+      "make": "Land Rover",
+      "model": "Defender",
+      "year": 2023,
+      "description": "A tough luxury SUV built for off-road adventures."
+    }
+  ]
+}
