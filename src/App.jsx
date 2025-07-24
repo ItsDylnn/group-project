@@ -11,14 +11,14 @@ function App() {
 
   //Fetch cars from the backend api
   useEffect(() => {
-    fetch("http://localhost:3000/cars")
+    fetch("api-ninjas.com/api/cars#cars-endpoint")
     .then(res => setCars(res.json()))
     .catch(err => console.error(err))
   },[]);
 
   // Add a new car to the backend api
   const addCar = () => {
-    fetch("http://localhost:3000/cars", {
+    fetch("api-ninjas.com/api/cars#cars-endpoint"), {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
@@ -28,7 +28,7 @@ function App() {
         brand,
         pricePerDay
       })
-    })
+    }
     .then(res => res.json())
     .then(data => {
       setCars([...cars, data]);
@@ -43,9 +43,8 @@ function App() {
     <div>
       <h1>Car Catalog</h1>
       <ul>
-        {cars.map(car=>(
-          <li key={car._id}></li>
-        ))}
+        ((
+        ))
       </ul>
 
       <h2>Add a new car</h2>
