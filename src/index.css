@@ -1,5 +1,5 @@
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: system-ui, Avenir, Helvetica, Arial, ;
   line-height: 1.5;
   font-weight: 400;
 
@@ -54,7 +54,7 @@ button {
   cursor: pointer;
 }
 button:hover {
-  background-color: white;
+  background-color: #f1efed;
   color:#ff7d29;
   transition: ease-in-out 0.3s; 
 }
@@ -72,13 +72,13 @@ button:focus-visible {
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
-    background-color: #ffffff;
+    background-color: #f1efed;
   }
   a:hover {
     color: #ff7d29;
   }
   button {
-   background: white;
+   background: #f1efed;
    color: black;
   }
 }
