@@ -13,15 +13,15 @@ const registar = () => {
         alert("Error registering user")
     }
     }
+  return (
+    <form onSubmit={handleSubmit}>
+      <h2>Register</h2>
+      <input name="username" placeholder="Username" onChange={handleChange} />
+      <input name="email" placeholder="Email" onChange={handleChange} />
+      <input type="password" name="password" placeholder="Password" onChange={handleChange} />
+      <button type="submit">Sign up</button>
+    </form>
+  );
 };
-return (
-  <form onsubmit={handleSubmit}>
-    <h2>Register</h2>
-    <input name = "Username" placeholder ="Username" onChange= "handleChange"/>
-    <input name ="email" placeHolder="Email" onChange={handleChange} />
-    <input type= "password" name="password" placeholder='password'/>
-    <button type="submit">Sign up</button>
-  </form>
-);
 
-export default registar
+export default registar;
