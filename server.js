@@ -1,54 +1,25 @@
-import express from "express"
-import cors from "cors"
-import fetch from "node-fetch"
+// server.js
+import express from "express";
+import cors from "cors";
 
-const app = express()
-const PORT = 5000
-const API_KEY = "Nv8iy6ahufEpMyBpxNCmyg==Pjq3PevX34nL6ZEr"
+const app = express();
+const PORT = 5000;
 
-app.use(cors())
-app.use(express.json())
+app.use(cors());
+app.use(express.json());
 
-app.get("/api/cars", async (req, res) => {
-  try {
-    const response = await fetch("https://api.api-ninjas.com/v1/cars?model=corolla", {
-      headers: { "X-Api-Key": API_KEY },
-    })
+const cars = [
+  { make: "Toyota", model: "Corolla", year: 1993 },
+  { make: "Honda", model: "Civic", year: 2018 },
+  { make: "Ford", model: "Mustang", year: 2020 },
+  { make: "BMW", model: "X5", year: 2021 },
+  { make: "Tesla", model: "Model 3", year: 2022 },
+];
 
-    const data = await response.json()
-    res.json(data)
-  } catch (err) {
-    console.error(err)
-    res.status(500).json({ error: "Failed to fetch from API Ninjas" })
-  }
-})
-
-app.post("/api/cars", async (req, res) => {
-  const { brand, name, pricePerDay } = req.body
-  console.log("Incoming POST:", req.body)
-
-  try {
-    const url = new URL("https://api.api-ninjas.com/v1/cars")
-    if (brand) url.searchParams.append("make", brand)
-    if (name) url.searchParams.append("model", name)
-
-    const response = await fetch(url, {
-      headers: { "X-Api-Key": API_KEY },
-    })
-
-    const data = await response.json()
-
-    const withPrice = Array.isArray(data)
-      ? data.map((car) => ({ ...car, pricePerDay }))
-      : { ...data, pricePerDay }
-
-    res.json(withPrice)
-  } catch (err) {
-    console.error("POST /api/cars error:", err)
-    res.status(500).json({ error: "Failed to fetch car data" })
-  }
-})
+app.get("/api/cars", (req, res) => {
+  res.json(cars);
+});
 
 app.listen(PORT, () => {
-  console.log(`Server running on http://localhost:${PORT}`)
-})
+  console.log(`Server running on http://localhost:${PORT}`);
+});

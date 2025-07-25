@@ -15,11 +15,10 @@ body {
 }
 
 body.dark {
-  background-color: #1e1d1d;
+  background-color : rebeccapurple;
   color: #ffb366;
 }
 
-/* Logo */
 .logo {
   height: 6em;
   padding: 1.5em;

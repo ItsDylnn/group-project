@@ -1,46 +1,30 @@
+// RoutesComponent.jsx
 import React from "react";
-import { Routes, Route } from "react-router-dom";
-
-import Home from "./Home";
-import Register from "../pages/RegisterPage";
+import { Routes, Route, Navigate } from "react-router-dom";
 import Login from "../pages/LoginPage";
-import Favorites from "../pages/FavoritesPage";
+import Register from "../pages/RegisterPage";
 import CarList from "./CarList";
-import ChooseCar from "./ChooseCar";
-import Contact from "./Contact";
-import About from "./About";
+// ... other imports
 
-function RoutesComponent({
-  bookingConfirmed,
-  BookingPage,
-  SuccessPage,
-  setSelectedCar,
-  isLoggedIn,
-  setIsLoggedIn,
-}) {
+export default function RoutesComponent({ isLoggedIn, setIsLoggedIn }) {
   return (
     <Routes>
+      {/* Default route to login */}
       <Route path="/" element={<Login setIsLoggedIn={setIsLoggedIn} />} />
-      <Route path="/register" element={<Register />} />
       <Route path="/login" element={<Login setIsLoggedIn={setIsLoggedIn} />} />
+      <Route path="/register" element={<Register />} />
+      {/* Protected routes */}
       {isLoggedIn && (
         <>
-          <Route path="/favorites" element={<Favorites />} />
           <Route path="/cars" element={<CarList />} />
-          <Route
-            path="/choose-car"
-            element={<ChooseCar setSelectedCar={setSelectedCar} />}
-          />
-          <Route path="/about" element={<About />} />
-          <Route path="/contact" element={<Contact />} />
+          {/* other protected pages */}
         </>
       )}
+      {/* Redirect if access denied */}
       <Route
-        path="/book"
-        element={bookingConfirmed ? <SuccessPage /> : <BookingPage />}
+        path="*"
+        element={<Navigate to="/login" replace />}
       />
     </Routes>
   );
 }
-
-export default RoutesComponent;
