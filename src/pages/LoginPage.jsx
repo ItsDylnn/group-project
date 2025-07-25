@@ -1,13 +1,17 @@
-import React, { useState } from "react"
-import { fakeLogin } from "../utils/fakeAuth"
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { fakeLogin } from "../utils/fakeAuth";
 
 export default function LoginPage() {
-  const [email, setEmail] = useState("")
-  const [password, setPassword] = useState("")
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const navigate = useNavigate();
 
   const handleSubmit = (e) => {
-    fakeLogin(email, password)
-  }
+    e.preventDefault();
+    fakeLogin(email, password); // optional validation
+    navigate("/cars"); // or any page you want to land on
+  };
 
   return (
     <div className="form-container">
@@ -18,5 +22,5 @@ export default function LoginPage() {
         <button type="submit">Login</button>
       </form>
     </div>
-  )
+  );
 }

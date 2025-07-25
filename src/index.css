@@ -151,4 +151,433 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
 
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
+@import "tailwindcss";
+
+:root {
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  line-height: 1.6;
+  font-weight: 900;
+  
+  color-scheme: light dark;
+  color: #000000 !important; /* Pure black - forced */
+  background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 50%, #e2e8f0 100%); /* slate gradient */
+  
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
+}
+
+/* Global link styles */
+a {
+  font-weight: 700;
+  color: #1e293b; /* slate-800 - very dark for visibility */
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.2s ease-in-out;
+  position: relative;
+}
+
+a:hover {
+  color: #ea580c; /* orange-600 */
+  transform: translateY(-1px);
+}
+
+a:focus {
+  outline: 2px solid #fb923c; /* orange-400 */
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* Body styling */
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  min-width: 320px;
+  min-height: 100vh;
+  background: inherit;
+  color: #0f172a; /* Ensure body text is very dark */
+}
+
+/* Typography with maximum contrast */
+h1 {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  line-height: 1.1;
+  font-weight: 900;
+  color: #0f172a; /* slate-900 - darkest possible */
+  margin-bottom: 1rem;
+}
+
+h2 {
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
+  font-weight: 800;
+  color: #0f172a; /* slate-900 */
+  margin-bottom: 0.75rem;
+}
+
+h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #1e293b; /* slate-800 */
+  margin-bottom: 0.5rem;
+}
+
+h4 {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: #1e293b; /* slate-800 */
+  margin-bottom: 0.5rem;
+}
+
+p {
+  color: #334155; /* slate-700 - much darker than before */
+  line-height: 1.7;
+  margin-bottom: 1rem;
+  font-weight: 600; /* Bolder for better visibility */
+}
+
+/* Enhanced button styles */
+button {
+  border-radius: 12px;
+  border: 2px solid transparent;
+  padding: 0.75em 1.5em;
+  font-size: 1rem;
+  font-weight: 700;
+  font-family: inherit;
+  background: linear-gradient(135deg, #ea580c 0%, #f97316 100%); /* orange gradient */
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 14px 0 rgba(234, 88, 12, 0.25);
+}
+
+button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s;
+}
+
+button:hover {
+  background: linear-gradient(135deg, #c2410c 0%, #ea580c 100%); /* darker orange gradient */
+  border-color: #fb923c; /* orange-400 */
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px 0 rgba(234, 88, 12, 0.35);
+}
+
+button:hover::before {
+  left: 100%;
+}
+
+button:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 10px 0 rgba(234, 88, 12, 0.3);
+}
+
+button:focus,
+button:focus-visible {
+  outline: 3px solid #fb923c; /* orange-400 */
+  outline-offset: 2px;
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+/* Input field styling with high contrast */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="date"],
+input[type="password"],
+select,
+textarea {
+  border: 2px solid #475569; /* slate-600 - darker border */
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  font-family: inherit;
+  background: white;
+  color: #0f172a; /* slate-900 - darkest text */
+  font-weight: 600;
+  transition: all 0.2s ease-in-out;
+  width: 100%;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: #fb923c; /* orange-400 */
+  box-shadow: 0 0 0 3px rgba(251, 146, 60, 0.1);
+}
+
+input::placeholder {
+  color: #475569; /* slate-600 - darker placeholder */
+  font-weight: 500;
+}
+
+/* Card styling with better contrast */
+.card {
+  background: rgba(255, 255, 255, 0.98);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(71, 85, 105, 0.3); /* slate-600 with opacity */
+  border-radius: 16px;
+  padding: 1.5rem;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease-in-out;
+  color: #0f172a; /* Ensure card text is darkest */
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.15), 0 8px 12px -4px rgba(0, 0, 0, 0.1);
+}
+
+/* Navigation styling with high contrast */
+nav {
+  background: rgba(255, 255, 255, 0.98);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(71, 85, 105, 0.3);
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+  color: #0f172a; /* Dark nav text */
+}
+
+/* Labels with maximum visibility */
+label {
+  color: #0f172a !important; /* slate-900 - darkest */
+  font-weight: 700 !important;
+}
+
+/* Force text colors to override any global styles */
+.text-override {
+  color: #0f172a !important;
+}
+
+.text-light-override {
+  color: #334155 !important;
+}
+
+.text-dark-override {
+  color: #0f172a !important;
+}
+
+/* Utility classes */
+.gradient-text {
+  background: linear-gradient(135deg, #0f172a 0%, #ea580c 50%, #0f172a 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.glass-effect {
+  background: rgba(255, 255, 255, 0.98);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Strengthen all text elements */
+span {
+  font-weight: 600;
+}
+
+div {
+  color: inherit;
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  :root {
+    color: #f1f5f9; /* slate-100 */
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%); /* dark slate gradient */
+  }
+  
+  body {
+    color: #f1f5f9;
+  }
+  
+  a {
+    color: #e2e8f0; /* slate-200 */
+  }
+  
+  a:hover {
+    color: #fb923c; /* orange-400 */
+  }
+  
+  h1, h2, h3, h4 {
+    color: #f8fafc; /* slate-50 */
+  }
+  
+  p {
+    color: #cbd5e1; /* slate-300 */
+  }
+  
+  label {
+    color: #f1f5f9 !important; /* slate-100 */
+  }
+  
+  .card {
+    background: rgba(30, 41, 59, 0.95); /* slate-800 with opacity */
+    border-color: rgba(71, 85, 105, 0.6); /* slate-600 with opacity */
+    color: #f1f5f9;
+  }
+  
+  nav {
+    background: rgba(15, 23, 42, 0.95); /* slate-900 with opacity */
+    border-bottom-color: rgba(71, 85, 105, 0.6);
+    color: #f1f5f9;
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  input[type="date"],
+  input[type="password"],
+  select,
+  textarea {
+    background: #1e293b; /* slate-800 */
+    border-color: #475569; /* slate-600 */
+    color: #f1f5f9; /* slate-100 */
+  }
+  
+  input::placeholder {
+    color: #64748b; /* slate-500 */
+  }
+  
+  .text-override {
+    color: #f1f5f9 !important;
+  }
+  
+  .text-light-override {
+    color: #cbd5e1 !important;
+  }
+  
+  .text-dark-override {
+    color: #f8fafc !important;
+  }
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  :root {
+    line-height: 1.5;
+  }
+  
+  body {
+    margin: 10px;
+  }
+  
+  button {
+    padding: 0.6em 1.2em;
+    font-size: 0.9rem;
+  }
+  
+  .card {
+    padding: 1rem;
+    border-radius: 12px;
+  }
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f5f9; /* slate-100 */
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, #fb923c, #ea580c); /* orange gradient */
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(to bottom, #ea580c, #c2410c); /* darker orange gradient */
+}
+
+@media (prefers-color-scheme: dark) {
+  ::-webkit-scrollbar-track {
+    background: #1e293b; /* slate-800 */
+  }
+}
