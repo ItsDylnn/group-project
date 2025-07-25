@@ -18,7 +18,9 @@ function ChooseCar({ setSelectedCar }) {
     { value: "lamborghini", label: "Lamborghini", icon: "⚡", description: "Pure Power" },
     { value: "porsche", label: "Porsche", icon: "🚗", description: "German Precision" },
     { value: "mclaren", label: "McLaren", icon: "🏁", description: "Racing Heritage" },
-    
+    { value: "bentley", label: "Bentley", icon: "👑", description: "British Luxury" },
+    { value: "rollsroyce", label: "Rolls-Royce", icon: "💎", description: "Ultimate Luxury" },
+    { value: "astonmartin", label: "Aston Martin", icon: "🎭", description: "British Elegance" }
   ];
 
   return (
@@ -47,7 +49,7 @@ function ChooseCar({ setSelectedCar }) {
           </h3>
           
           {/* Brand Cards Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-7 gap-4">
             {brands.map((brand) => (
               <button
                 key={brand.value}

@@ -130,7 +130,7 @@ function CarApi({ brand, onSelectCar }) {
         year: 2023,
         class: "Luxury Coupe",
         dailyRate: 850,
-        image: "https://images.unsplash.com/photo-1503736334956-4c8f8e92946d?w=400&h=300&fit=crop",
+        image: "https://images.unsplash.com/photo-1749215530415-6a4cd6b31141?q=80&w=764&auto=format&fit=crop",
         features: ["W12 Engine", "Handcrafted Interior", "All-Wheel Drive"]
       },
       {
@@ -139,7 +139,7 @@ function CarApi({ brand, onSelectCar }) {
         year: 2023,
         class: "Luxury SUV",
         dailyRate: 950,
-        image: "https://images.unsplash.com/photo-1555626906-fcf10d6851b4?w=400&h=300&fit=crop",
+        image: "https://images.unsplash.com/photo-1643398014215-b74985989f5e?q=80&w=715&auto=format&fit=crop",
         features: ["V8 Engine", "Off-Road Package", "Premium Luxury"]
       }
     ],
@@ -150,7 +150,7 @@ function CarApi({ brand, onSelectCar }) {
         year: 2023,
         class: "Ultra Luxury",
         dailyRate: 1600,
-        image: "https://images.unsplash.com/photo-1544829099-b9a0c5303bea?w=400&h=300&fit=crop",
+        image: "https://images.unsplash.com/photo-1624804244466-e91352a03470?q=80&w=764&auto=format&fit=crop",
         features: ["V12 Engine", "Magic Carpet Ride", "Starlight Headliner"]
       },
       {
@@ -159,27 +159,27 @@ function CarApi({ brand, onSelectCar }) {
         year: 2023,
         class: "Ultra Luxury SUV",
         dailyRate: 1800,
-        image: "https://images.unsplash.com/photo-1503736334956-4c8f8e92946d?w=400&h=300&fit=crop",
+        image: "https://images.unsplash.com/photo-1627838908649-758541adc67b?q=80&w=765&auto=format&fit=crop",
         features: ["Twin Turbo V12", "Viewing Suite", "Off-Road Capability"]
       }
     ],
     astonmartin: [
       {
         make: "Aston Martin",
-        model: "DB11",
+        model: "DB12",
         year: 2023,
         class: "Grand Tourer",
         dailyRate: 1100,
-        image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=300&fit=crop",
+        image: "https://images.unsplash.com/photo-1565793979206-10951493332d?q=80&w=764&auto=format&fit=crop",
         features: ["V8 Twin Turbo", "British Craftsmanship", "Sport Plus"]
       },
       {
         make: "Aston Martin",
-        model: "Vantage",
+        model: "DBX",
         year: 2023,
-        class: "Sports Car",
+        class: "SUV",
         dailyRate: 1000,
-        image: "https://images.unsplash.com/photo-1606016159991-8510112a6cb4?w=400&h=300&fit=crop",
+        image: "https://images.unsplash.com/photo-1719917226505-0e07cc8d263b?q=80&w=1170&auto=format&fit=crop",
         features: ["AMG V8", "Lightweight Design", "Track Focused"]
       }
     ]
@@ -188,7 +188,7 @@ function CarApi({ brand, onSelectCar }) {
   useEffect(() => {
     const loadCars = () => {
       setLoading(true);
-      
+
       // Simulate API delay
       setTimeout(() => {
         const brandCars = carDatabase[brand] || [];
@@ -252,7 +252,7 @@ function CarApi({ brand, onSelectCar }) {
             }}>
               {car.make} {car.model}
             </h3>
-            
+
             <p style={{
               color: '#666666',
               fontWeight: '600',

@@ -59,7 +59,7 @@ const Checkout = ({ onConfirm, totalCost, isLoading }) => {
 
   return (
     <div className="bg-white/95 backdrop-blur-sm p-8 rounded-2xl shadow-lg border border-slate-300">
-      <h3 className="text-xl font-bold mb-6 text-slate-900">
+      <h3 style={{fontSize: '1.25rem', fontWeight: '900', color: '#000000', marginBottom: '1.5rem'}}>
         Payment Details
       </h3>
       
@@ -68,68 +68,143 @@ const Checkout = ({ onConfirm, totalCost, isLoading }) => {
         <div className="flex items-center justify-between">
           <div className="flex items-center space-x-2">
             <DollarSign className="w-5 h-5 text-orange-600" />
-            <span className="font-bold text-slate-900">Total Amount</span>
+            <span style={{fontWeight: '900', color: '#000000'}}>Total Amount</span>
           </div>
-          <span className="text-2xl font-black text-orange-600">${totalCost}</span>
+          <span style={{fontSize: '1.5rem', fontWeight: '900', color: '#ea580c'}}>${totalCost}</span>
         </div>
       </div>
 
       <div className="space-y-6">
         {/* Cardholder Name */}
         <div className="space-y-2">
-          <label className="block text-sm font-bold text-slate-900 uppercase tracking-wide">
+          <div style={{
+            fontSize: '14px', 
+            fontWeight: '900', 
+            color: '#000000', 
+            textTransform: 'uppercase', 
+            letterSpacing: '1px',
+            marginBottom: '8px',
+            display: 'block'
+          }}>
             Cardholder Name
-          </label>
+          </div>
           <input
             type="text"
             value={name}
             onChange={(e) => setName(e.target.value)}
             placeholder="Enter full name as on card"
-            className="w-full p-4 border-2 border-slate-300 rounded-xl focus:ring-3 focus:ring-orange-400/20 focus:border-orange-500 transition-all duration-200 text-slate-900 font-bold bg-white hover:border-slate-400 shadow-sm"
+            style={{
+              width: '100%',
+              padding: '16px',
+              border: '2px solid #94a3b8',
+              borderRadius: '12px',
+              fontSize: '16px',
+              fontWeight: '900',
+              color: '#000000',
+              backgroundColor: '#ffffff',
+              outline: 'none'
+            }}
           />
         </div>
 
         {/* Card Number */}
         <div className="space-y-2">
-          <label className="block text-sm font-bold text-slate-900 uppercase tracking-wide">
+          <div style={{
+            fontSize: '14px', 
+            fontWeight: '900', 
+            color: '#000000', 
+            textTransform: 'uppercase', 
+            letterSpacing: '1px',
+            marginBottom: '8px',
+            display: 'block'
+          }}>
             Card Number
-          </label>
+          </div>
           <input
             type="text"
             value={cardNumber}
             onChange={handleCardNumberChange}
             placeholder="1234 5678 9012 3456"
             maxLength="19"
-            className="w-full p-4 border-2 border-slate-300 rounded-xl focus:ring-3 focus:ring-orange-400/20 focus:border-orange-500 transition-all duration-200 text-slate-900 font-bold bg-white hover:border-slate-400 shadow-sm font-mono"
+            style={{
+              width: '100%',
+              padding: '16px',
+              border: '2px solid #94a3b8',
+              borderRadius: '12px',
+              fontSize: '16px',
+              fontWeight: '900',
+              color: '#000000',
+              backgroundColor: '#ffffff',
+              outline: 'none',
+              fontFamily: 'monospace'
+            }}
           />
         </div>
 
         {/* Expiry Date and CVV */}
         <div className="grid grid-cols-2 gap-4">
           <div className="space-y-2">
-            <label className="block text-sm font-bold text-slate-900 uppercase tracking-wide">
+            <div style={{
+              fontSize: '14px', 
+              fontWeight: '900', 
+              color: '#000000', 
+              textTransform: 'uppercase', 
+              letterSpacing: '1px',
+              marginBottom: '8px',
+              display: 'block'
+            }}>
               Expiry Date
-            </label>
+            </div>
             <input
               type="text"
               value={expiryDate}
               onChange={handleExpiryDateChange}
               placeholder="MM/YY"
               maxLength="5"
-              className="w-full p-4 border-2 border-slate-300 rounded-xl focus:ring-3 focus:ring-orange-400/20 focus:border-orange-500 transition-all duration-200 text-slate-900 font-bold bg-white hover:border-slate-400 shadow-sm font-mono"
+              style={{
+                width: '100%',
+                padding: '16px',
+                border: '2px solid #94a3b8',
+                borderRadius: '12px',
+                fontSize: '16px',
+                fontWeight: '900',
+                color: '#000000',
+                backgroundColor: '#ffffff',
+                outline: 'none',
+                fontFamily: 'monospace'
+              }}
             />
           </div>
           <div className="space-y-2">
-            <label className="block text-sm font-bold text-slate-900 uppercase tracking-wide">
+            <div style={{
+              fontSize: '14px', 
+              fontWeight: '900', 
+              color: '#000000', 
+              textTransform: 'uppercase', 
+              letterSpacing: '1px',
+              marginBottom: '8px',
+              display: 'block'
+            }}>
               CVV
-            </label>
+            </div>
             <input
               type="password"
               value={cvv}
               onChange={handleCvvChange}
               placeholder="123"
               maxLength="4"
-              className="w-full p-4 border-2 border-slate-300 rounded-xl focus:ring-3 focus:ring-orange-400/20 focus:border-orange-500 transition-all duration-200 text-slate-900 font-bold bg-white hover:border-slate-400 shadow-sm font-mono"
+              style={{
+                width: '100%',
+                padding: '16px',
+                border: '2px solid #94a3b8',
+                borderRadius: '12px',
+                fontSize: '16px',
+                fontWeight: '900',
+                color: '#000000',
+                backgroundColor: '#ffffff',
+                outline: 'none',
+                fontFamily: 'monospace'
+              }}
             />
           </div>
         </div>
@@ -138,7 +213,7 @@ const Checkout = ({ onConfirm, totalCost, isLoading }) => {
         <div className="p-3 bg-slate-100 rounded-lg border border-slate-300">
           <div className="flex items-center space-x-2">
             <Lock className="w-4 h-4 text-slate-600" />
-            <span className="text-xs text-slate-800 font-bold">
+            <span style={{fontSize: '12px', color: '#000000', fontWeight: '900'}}>
               Your payment information is encrypted and secure
             </span>
           </div>
@@ -172,7 +247,7 @@ const Checkout = ({ onConfirm, totalCost, isLoading }) => {
 
         {!isFormValid && (
           <div className="text-center">
-            <p className="text-sm text-slate-800 font-semibold">
+            <p style={{fontSize: '14px', color: '#000000', fontWeight: '900'}}>
               Please fill in all payment details to continue
             </p>
           </div>

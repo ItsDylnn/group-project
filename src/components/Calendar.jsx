@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { CheckCircle } from 'lucide-react';
+import { CheckCircle, Calendar as CalendarIcon } from 'lucide-react';
 import Timer from './Timer';
 
 const Calendar = ({ startDate, endDate, onStartDateChange, onEndDateChange }) => {
@@ -9,34 +9,49 @@ const Calendar = ({ startDate, endDate, onStartDateChange, onEndDateChange }) =>
     <div className="space-y-6">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div className="space-y-3">
-          <label style={{
-            display: 'block', 
+          <div style={{
             fontSize: '14px', 
             fontWeight: '900', 
             color: '#000000', 
             textTransform: 'uppercase', 
             letterSpacing: '1px',
-            marginBottom: '8px'
+            marginBottom: '8px',
+            display: 'block'
           }}>
             START DATE
-          </label>
-          <input
-            type="date"
-            value={startDate}
-            min={today}
-            onChange={(e) => onStartDateChange(e.target.value)}
-            style={{
-              width: '100%',
+          </div>
+          <div style={{display: 'flex', alignItems: 'center', gap: '8px'}}>
+            <input
+              type="date"
+              value={startDate}
+              min={today}
+              onChange={(e) => onStartDateChange(e.target.value)}
+              style={{
+                flex: '1',
+                padding: '16px',
+                border: '2px solid #94a3b8',
+                borderRadius: '12px',
+                fontSize: '16px',
+                fontWeight: '900',
+                color: '#000000',
+                backgroundColor: '#ffffff',
+                outline: 'none'
+              }}
+            />
+            <div style={{
               padding: '16px',
-              border: '2px solid #94a3b8',
+              backgroundColor: '#f97316',
               borderRadius: '12px',
-              fontSize: '16px',
-              fontWeight: '900',
-              color: '#000000',
-              backgroundColor: '#ffffff',
-              outline: 'none'
+              cursor: 'pointer',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center'
             }}
-          />
+            onClick={() => document.querySelector('input[type="date"]').showPicker()}
+            >
+              <CalendarIcon style={{width: '20px', height: '20px', color: '#ffffff'}} />
+            </div>
+          </div>
           {startDate && (
             <p style={{
               fontSize: '12px',
@@ -53,34 +68,52 @@ const Calendar = ({ startDate, endDate, onStartDateChange, onEndDateChange }) =>
         </div>
         
         <div className="space-y-3">
-          <label style={{
-            display: 'block', 
+          <div style={{
             fontSize: '14px', 
             fontWeight: '900', 
             color: '#000000', 
             textTransform: 'uppercase', 
             letterSpacing: '1px',
-            marginBottom: '8px'
+            marginBottom: '8px',
+            display: 'block'
           }}>
             END DATE
-          </label>
-          <input
-            type="date"
-            value={endDate}
-            min={startDate || today}
-            onChange={(e) => onEndDateChange(e.target.value)}
-            style={{
-              width: '100%',
+          </div>
+          <div style={{display: 'flex', alignItems: 'center', gap: '8px'}}>
+            <input
+              type="date"
+              value={endDate}
+              min={startDate || today}
+              onChange={(e) => onEndDateChange(e.target.value)}
+              style={{
+                flex: '1',
+                padding: '16px',
+                border: '2px solid #94a3b8',
+                borderRadius: '12px',
+                fontSize: '16px',
+                fontWeight: '900',
+                color: '#000000',
+                backgroundColor: '#ffffff',
+                outline: 'none'
+              }}
+            />
+            <div style={{
               padding: '16px',
-              border: '2px solid #94a3b8',
+              backgroundColor: '#f97316',
               borderRadius: '12px',
-              fontSize: '16px',
-              fontWeight: '900',
-              color: '#000000',
-              backgroundColor: '#ffffff',
-              outline: 'none'
+              cursor: 'pointer',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center'
             }}
-          />
+            onClick={() => {
+              const inputs = document.querySelectorAll('input[type="date"]');
+              inputs[1].showPicker();
+            }}
+            >
+              <CalendarIcon style={{width: '20px', height: '20px', color: '#ffffff'}} />
+            </div>
+          </div>
           {endDate && (
             <p style={{
               fontSize: '12px',

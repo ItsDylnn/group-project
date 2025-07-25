@@ -22,66 +22,135 @@ const Timer = ({ startDate, endDate, dailyRate }) => {
   const duration = calculateDuration();
   const totalCost = duration * dailyRate;
 
+  // Inline styles to ensure visibility
+  const blackTextStyle = { 
+    color: '#0f172a', 
+    fontWeight: '900' 
+  };
+  
+  const whiteTextStyle = { 
+    color: '#ffffff', 
+    fontWeight: '900' 
+  };
+
   return (
-    <div className="space-y-4">
-      <h3 className="text-xl font-black mb-6 text-black">
+    <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+      <h3 style={{ 
+        fontSize: '1.25rem', 
+        fontWeight: '900', 
+        marginBottom: '1.5rem', 
+        color: '#0f172a' 
+      }}>
         Booking Summary
       </h3>
 
-      <div className="space-y-4">
+      <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
         {/* Date Range Display */}
-        <div className="bg-slate-200 rounded-xl p-4 border border-slate-400">
-          <div className="mb-3">
-            <span className="font-black text-black">Rental Period</span>
+        <div style={{ 
+          backgroundColor: '#e2e8f0', 
+          borderRadius: '0.75rem', 
+          padding: '1rem', 
+          border: '1px solid #94a3b8' 
+        }}>
+          <div style={{ marginBottom: '0.75rem' }}>
+            <span style={blackTextStyle}>Rental Period</span>
           </div>
-          <div className="space-y-2 text-sm">
-            <div className="flex justify-between">
-              <span className="text-black font-black">Start:</span>
-              <span className="font-black text-black">{formatDate(startDate)}</span>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem', fontSize: '0.875rem' }}>
+            <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+              <span style={blackTextStyle}>Start:</span>
+              <span style={blackTextStyle}>{formatDate(startDate)}</span>
             </div>
-            <div className="flex justify-between">
-              <span className="text-black font-black">End:</span>
-              <span className="font-black text-black">{formatDate(endDate)}</span>
+            <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+              <span style={blackTextStyle}>End:</span>
+              <span style={blackTextStyle}>{formatDate(endDate)}</span>
             </div>
           </div>
         </div>
 
         {/* Duration */}
-        <div className="flex items-center justify-between p-4 bg-orange-200 rounded-xl border border-orange-400">
-          <span className="font-black text-black">Duration:</span>
-          <span className="font-black text-orange-700 text-lg">
+        <div style={{ 
+          display: 'flex', 
+          alignItems: 'center', 
+          justifyContent: 'space-between', 
+          padding: '1rem', 
+          backgroundColor: '#fed7aa', 
+          borderRadius: '0.75rem', 
+          border: '1px solid #fb923c' 
+        }}>
+          <span style={blackTextStyle}>Duration:</span>
+          <span style={{ 
+            fontWeight: '900', 
+            color: '#c2410c', 
+            fontSize: '1.125rem' 
+          }}>
             {duration} {duration === 1 ? 'day' : 'days'}
           </span>
         </div>
 
         {/* Daily Rate */}
-        <div className="flex items-center justify-between p-4 bg-slate-200 rounded-xl border border-slate-400">
-          <span className="font-black text-black">Daily Rate:</span>
-          <span className="font-black text-black text-lg">${dailyRate}</span>
+        <div style={{ 
+          display: 'flex', 
+          alignItems: 'center', 
+          justifyContent: 'space-between', 
+          padding: '1rem', 
+          backgroundColor: '#e2e8f0', 
+          borderRadius: '0.75rem', 
+          border: '1px solid #94a3b8' 
+        }}>
+          <span style={blackTextStyle}>Daily Rate:</span>
+          <span style={{ ...blackTextStyle, fontSize: '1.125rem' }}>${dailyRate}</span>
         </div>
 
         {/* Calculation Breakdown */}
         {duration > 0 && (
-          <div className="bg-slate-200 rounded-xl p-4 border border-slate-400">
-            <div className="text-center text-sm text-black font-black mb-2">
+          <div style={{ 
+            backgroundColor: '#e2e8f0', 
+            borderRadius: '0.75rem', 
+            padding: '1rem', 
+            border: '1px solid #94a3b8' 
+          }}>
+            <div style={{ 
+              textAlign: 'center', 
+              fontSize: '0.875rem', 
+              ...blackTextStyle, 
+              marginBottom: '0.5rem' 
+            }}>
               Calculation
             </div>
-            <div className="text-center font-mono text-black font-black">
-              {duration} days × ${dailyRate} = ${totalCost}
+            <div style={{ 
+              textAlign: 'center', 
+              fontFamily: 'monospace', 
+              ...blackTextStyle 
+            }}>
+              {duration} days × ${dailyRate} = ${totalCost.toLocaleString()}
             </div>
           </div>
         )}
 
         {/* Total Cost */}
-        <div className="relative">
-          <div className="absolute inset-0 bg-gradient-to-r from-orange-200/50 to-orange-300/50 rounded-xl blur-sm"></div>
-          <div className="relative bg-gradient-to-r from-orange-500 to-orange-600 p-6 rounded-xl shadow-lg">
-            <div className="flex items-center justify-between text-white">
-              <span className="font-black text-lg">Total Cost:</span>
-              <span className="font-black text-2xl">${totalCost}</span>
+        <div style={{ position: 'relative' }}>
+          <div style={{ 
+            background: 'linear-gradient(135deg, #ea580c 0%, #f97316 100%)', 
+            padding: '1.5rem', 
+            borderRadius: '0.75rem', 
+            boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1)' 
+          }}>
+            <div style={{ 
+              display: 'flex', 
+              alignItems: 'center', 
+              justifyContent: 'space-between' 
+            }}>
+              <span style={{ ...whiteTextStyle, fontSize: '1.125rem' }}>Total Cost:</span>
+              <span style={{ ...whiteTextStyle, fontSize: '1.5rem' }}>${totalCost.toLocaleString()}</span>
             </div>
             {duration > 1 && (
-              <div className="mt-2 text-white text-sm text-right font-black">
+              <div style={{ 
+                marginTop: '0.5rem', 
+                color: '#ffffff', 
+                fontSize: '0.875rem', 
+                textAlign: 'right', 
+                fontWeight: '900' 
+              }}>
                 Average: ${(totalCost / duration).toFixed(2)} per day
               </div>
             )}
@@ -90,8 +159,13 @@ const Timer = ({ startDate, endDate, dailyRate }) => {
 
         {/* Additional Info */}
         {duration > 0 && (
-          <div className="bg-blue-200 rounded-xl p-4 border border-blue-400">
-            <span className="text-sm font-black text-black">
+          <div style={{ 
+            backgroundColor: '#bfdbfe', 
+            borderRadius: '0.75rem', 
+            padding: '1rem', 
+            border: '1px solid #60a5fa' 
+          }}>
+            <span style={{ fontSize: '0.875rem', ...blackTextStyle }}>
               {duration >= 7 ? '🎉 Extended rental - Great choice!' : 
                duration >= 3 ? '✨ Multi-day rental' : 
                '⚡ Short-term rental'}
@@ -102,8 +176,8 @@ const Timer = ({ startDate, endDate, dailyRate }) => {
 
       {/* Empty State */}
       {duration === 0 && (
-        <div className="text-center py-8">
-          <p className="text-black font-black text-lg">
+        <div style={{ textAlign: 'center', paddingTop: '2rem', paddingBottom: '2rem' }}>
+          <p style={{ ...blackTextStyle, fontSize: '1.125rem' }}>
             Select your rental dates to see pricing details
           </p>
         </div>
@@ -112,5 +186,15 @@ const Timer = ({ startDate, endDate, dailyRate }) => {
   );
 };
 
-
-export default Timer;
+// Demo with sample data
+export default function App() {
+  return (
+    <div className="max-w-md mx-auto p-6 bg-white">
+      <Timer 
+        startDate="2025-07-26" 
+        endDate="2025-07-29" 
+        dailyRate={1500}
+      />
+    </div>
+  );
+};
