@@ -10,7 +10,7 @@ function CarApi({ brand, onSelectCar }) {
       {
         make: "Ferrari",
         model: "488 GTB",
-        year: 2023,
+        year: 2018,
         class: "Sports Car",
         dailyRate: 1200,
         image: "https://images.unsplash.com/photo-1709559593427-4b7ac31080d2?q=80&w=1632&auto=format&fit=crop",
@@ -19,7 +19,7 @@ function CarApi({ brand, onSelectCar }) {
       {
         make: "Ferrari",
         model: "F8 Tributo",
-        year: 2023,
+        year: 2020,
         class: "Supercar",
         dailyRate: 1500,
         image: "https://images.unsplash.com/photo-1730110206447-cc9966cffd7e?q=80&w=687&auto=format&fit=crop",
@@ -48,7 +48,7 @@ function CarApi({ brand, onSelectCar }) {
       {
         make: "Lamborghini",
         model: "Huracán EVO",
-        year: 2023,
+        year: 2022,
         class: "Supercar",
         dailyRate: 1300,
         image: "https://images.unsplash.com/photo-1672197341631-de26580def5f?q=80&w=687&auto=format&fit=crop",
@@ -57,7 +57,7 @@ function CarApi({ brand, onSelectCar }) {
       {
         make: "Lamborghini",
         model: "Aventador SVJ",
-        year: 2023,
+        year: 2022,
         class: "Hypercar",
         dailyRate: 1800,
         image: "https://images.unsplash.com/photo-1694575341005-10a3e9400a58?q=80&w=1170&auto=format&fit=crop",
@@ -66,7 +66,7 @@ function CarApi({ brand, onSelectCar }) {
       {
         make: "Lamborghini",
         model: "Urus",
-        year: 2023,
+        year: 2021,
         class: "Luxury SUV",
         dailyRate: 1000,
         image: "https://images.unsplash.com/photo-1746151890879-5a1f648855e9?q=80&w=1170&auto=format&fit=crop",
@@ -77,7 +77,7 @@ function CarApi({ brand, onSelectCar }) {
       {
         make: "Porsche",
         model: "911 Turbo S",
-        year: 2023,
+        year: 2020,
         class: "Sports Car",
         dailyRate: 900,
         image: "https://images.unsplash.com/photo-1679478878845-af7294f28b27?q=80&w=1170&auto=format&fit=crop",
@@ -86,7 +86,7 @@ function CarApi({ brand, onSelectCar }) {
       {
         make: "Porsche",
         model: "Cayenne Turbo",
-        year: 2023,
+        year: 2022,
         class: "Luxury SUV",
         dailyRate: 800,
         image: "https://images.unsplash.com/photo-1699325974549-fd06639650aa?q=80&w=1170&auto=format&fit=crop",
@@ -106,7 +106,7 @@ function CarApi({ brand, onSelectCar }) {
       {
         make: "McLaren",
         model: "720S",
-        year: 2023,
+        year: 2022,
         class: "Supercar",
         dailyRate: 1400,
         image: "https://images.unsplash.com/photo-1630227476220-f57efc67237e?q=80&w=1631&auto=format&fit=crop",
@@ -115,7 +115,7 @@ function CarApi({ brand, onSelectCar }) {
       {
         make: "McLaren",
         model: "P1",
-        year: 2013,
+        year: 2015,
         class: "Hypercar",
         dailyRate: 7200,
         image: "https://images.unsplash.com/photo-1677059913057-fc904d468f10?q=80&w=1685&auto=format&fit=crop",
@@ -127,7 +127,7 @@ function CarApi({ brand, onSelectCar }) {
       {
         make: "Bentley",
         model: "Continental GT",
-        year: 2023,
+        year: 2021,
         class: "Luxury Coupe",
         dailyRate: 850,
         image: "https://images.unsplash.com/photo-1749215530415-6a4cd6b31141?q=80&w=764&auto=format&fit=crop",
@@ -136,7 +136,7 @@ function CarApi({ brand, onSelectCar }) {
       {
         make: "Bentley",
         model: "Bentayga",
-        year: 2023,
+        year: 2020,
         class: "Luxury SUV",
         dailyRate: 950,
         image: "https://images.unsplash.com/photo-1643398014215-b74985989f5e?q=80&w=715&auto=format&fit=crop",
@@ -147,7 +147,7 @@ function CarApi({ brand, onSelectCar }) {
       {
         make: "Rolls-Royce",
         model: "Ghost",
-        year: 2023,
+        year: 2022,
         class: "Ultra Luxury",
         dailyRate: 1600,
         image: "https://images.unsplash.com/photo-1624804244466-e91352a03470?q=80&w=764&auto=format&fit=crop",
@@ -156,7 +156,7 @@ function CarApi({ brand, onSelectCar }) {
       {
         make: "Rolls-Royce",
         model: "Cullinan",
-        year: 2023,
+        year: 2022,
         class: "Ultra Luxury SUV",
         dailyRate: 1800,
         image: "https://images.unsplash.com/photo-1627838908649-758541adc67b?q=80&w=765&auto=format&fit=crop",
@@ -176,7 +176,7 @@ function CarApi({ brand, onSelectCar }) {
       {
         make: "Aston Martin",
         model: "DBX",
-        year: 2023,
+        year: 2022,
         class: "SUV",
         dailyRate: 1000,
         image: "https://images.unsplash.com/photo-1719917226505-0e07cc8d263b?q=80&w=1170&auto=format&fit=crop",
