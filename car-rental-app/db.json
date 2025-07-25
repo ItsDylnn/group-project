@@ -87,7 +87,7 @@
       "type": "Sportback",
       "pricePerDay": 220,
       "year": 2021,
-      "image": "https://images.unsplash.com/photo-1542838076-9e898279f47c?q=80&w=727&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "image": "https://via.placeholder.com/300x200",
       "description": "A stylish and powerful sportback blending everyday usability with RS performance and sleek German design."
     },
     {
@@ -99,26 +99,6 @@
       "year": 2019,
       "image": "https://images.unsplash.com/photo-1683444112252-41c5ddf73815?q=80&w=1169&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       "description": "A sporty hatchback offering a perfect blend of everyday usability, turbocharged performance, and all-wheel-drive agility."
-    },
-    {
-      "id": 11,
-      "name": "Mercedes-Benz S-Class",
-      "brand": "Mercedes-Benz",
-      "type": "Luxury Sedan",
-      "pricePerDay": 450,
-      "year": 2023,
-      "image": "https://images.unsplash.com/photo-1610099610040-ab19f3a5ec35?q=80&w=764&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      "description": "A flagship luxury sedan delivering cutting-edge technology, top-tier comfort, and an elegant design for the ultimate driving experience."
-    },
-    {
-      "id": 12,
-      "name": "Ferrari F8 Tributo",
-      "brand": "Ferrari",
-      "type": "Coupe",
-      "pricePerDay": 1200,
-      "year": 2022,
-      "image": "https://images.unsplash.com/photo-1614200187524-dc4b892acf16?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      "description": "A high-performance Italian supercar powered by a twin-turbo V8, blending breathtaking speed with sleek aerodynamic design."
     }
   ]
 }
