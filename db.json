@@ -1,0 +1,7 @@
+{
+  "cars": [
+    { "id": 1, "make": "Ferrari", "model": "488 GTB", "year": 2023, "class": "Sport" },
+    { "id": 2, "make": "Lamborghini", "model": "Huracán Evo", "year": 2022, "class": "Super" },
+    { "id": 3, "make": "Porsche", "model": "911 Turbo S", "year": 2024, "class": "Sport" }
+  ]
+}
