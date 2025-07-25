@@ -1,0 +1,124 @@
+{
+  "cars": [
+    {
+      "id": 1,
+      "name": "Lamborghini Huracan",
+      "brand": "Lamborghini",
+      "type": "Coupe",
+      "pricePerDay": 400,
+      "year": 2017,
+      "image": "https://images.unsplash.com/photo-1612148493229-86d3671eb44d?q=80&w=987&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "description": "A high-performance, exotic supercar built for speed and style. Perfect for luxury experiences and adrenaline-filled drives."
+    },
+    {
+      "id": 2,
+      "name": "BMW M4 Coupe",
+      "brand": "BMW",
+      "type": "Coupe",
+      "pricePerDay": 150,
+      "year": 2018,
+      "image": "https://images.unsplash.com/photo-1580273916550-e323be2ae537?q=80&w=1064&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "description": "A high-performance coupe with aggressive styling, track-ready engineering, and luxurious comfort"
+    },
+    {
+      "id": 3,
+      "name": "Mercedes-AMG G63",
+      "brand": "Mercedes-Benz",
+      "type": "SUV",
+      "pricePerDay": 350,
+      "year": 2021,
+      "image": "https://images.unsplash.com/photo-1577372794873-e6b8efa7dcc3?q=80&w=1015&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "description": "A powerful and luxurious SUV combining off-road capability with AMG performance and executive comfort."
+    },
+    {
+      "id": 4,
+      "name": "BMW 7 Series",
+      "brand": "BMW",
+      "type": "Sedan",
+      "pricePerDay": 250,
+      "year": 2020,
+      "image": "https://images.unsplash.com/photo-1601362840469-51e4d8d58785?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "description": "A full-size luxury sedan offering refined comfort, advanced tech, and a smooth, powerful drive — perfect for executive travel."
+    },
+    {
+      "id": 5,
+      "name": "BMW M3",
+      "brand": "BMW",
+      "type": "Sedan",
+      "pricePerDay": 180,
+      "year": 2018,
+      "image": "https://images.unsplash.com/flagged/photo-1577952859600-c235e7aac2d7?q=80&w=988&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "description": "A high-performance sports sedan that blends everyday practicality with blistering speed and dynamic handling."
+    },
+    {
+      "id": 6,
+      "name": "Mercedes-AMG GT",
+      "brand": "Mercedes-Benz",
+      "type": "Coupe",
+      "pricePerDay": 320,
+      "year": 2020,
+      "image": "https://images.unsplash.com/photo-1546518071-fddcdda7580a?q=80&w=1064&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "description": "A stunning high-performance coupe with sleek design, precise handling, and thunderous AMG power for an unforgettable drive."
+    },
+    {
+      "id": 7,
+      "name": "McLaren 720S",
+      "brand": "McLaren",
+      "type": "Coupe",
+      "pricePerDay": 500,
+      "year": 2020,
+      "image": "https://images.unsplash.com/photo-1577473404054-cbdf6c62ebaa?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "description": "A futuristic supercar with breathtaking acceleration, aerodynamic design, and cutting-edge performance engineering."
+    },
+    {
+      "id": 8,
+      "name": "Mercedes-Maybach S-Class",
+      "brand": "Mercedes-Benz",
+      "type": "Sedan",
+      "pricePerDay": 500,
+      "year": 2022,
+      "image": "https://images.unsplash.com/photo-1739545884216-634937b0e664?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "description": "A luxurious executive sedan that offers unmatched comfort, advanced tech, and prestigious design — the pinnacle of sophistication."
+    },
+    {
+      "id": 9,
+      "name": "Audi RS5 Sportback",
+      "brand": "Audi",
+      "type": "Sportback",
+      "pricePerDay": 220,
+      "year": 2021,
+      "image": "https://images.unsplash.com/photo-1542838076-9e898279f47c?q=80&w=727&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "description": "A stylish and powerful sportback blending everyday usability with RS performance and sleek German design."
+    },
+    {
+      "id": 10,
+      "name": "Volkswagen Golf R",
+      "brand": "Volkswagen",
+      "type": "Hatchback",
+      "pricePerDay": 120,
+      "year": 2019,
+      "image": "https://images.unsplash.com/photo-1683444112252-41c5ddf73815?q=80&w=1169&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "description": "A sporty hatchback offering a perfect blend of everyday usability, turbocharged performance, and all-wheel-drive agility."
+    },
+    {
+      "id": 11,
+      "name": "Mercedes-Benz S-Class",
+      "brand": "Mercedes-Benz",
+      "type": "Luxury Sedan",
+      "pricePerDay": 450,
+      "year": 2023,
+      "image": "https://images.unsplash.com/photo-1610099610040-ab19f3a5ec35?q=80&w=764&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "description": "A flagship luxury sedan delivering cutting-edge technology, top-tier comfort, and an elegant design for the ultimate driving experience."
+    },
+    {
+      "id": 12,
+      "name": "Ferrari F8 Tributo",
+      "brand": "Ferrari",
+      "type": "Coupe",
+      "pricePerDay": 1200,
+      "year": 2022,
+      "image": "https://images.unsplash.com/photo-1614200187524-dc4b892acf16?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "description": "A high-performance Italian supercar powered by a twin-turbo V8, blending breathtaking speed with sleek aerodynamic design."
+    }
+  ]
+}
