@@ -1,11 +1,11 @@
-import React, { useState } from "react";
-import Login from "./components/LoginPage";
-import ChooseCar from "./components/ChooseCar";
-import CarList from "./components/CarList";
+import React, { useState } from "react"
+import Login from "./components/LoginPage"
+import ChooseCar from "./components/ChooseCar"
+import CarList from "./components/CarList"
 
 function App() {
-  const [user, setUser] = useState(null);
-  const [selectedCar, setSelectedCar] = useState(null);
+  const [user, setUser] = useState(null)
+  const [selectedCar, setSelectedCar] = useState(null)
 
   return (
     <>
@@ -18,7 +18,7 @@ function App() {
         </>
       )}
     </>
-  );
+  )
 }
 
-export default App;
+export default App

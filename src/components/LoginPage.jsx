@@ -5,11 +5,10 @@ export default function LoginPage({ onLogin }) {
   const [password, setPassword] = useState("");
 
   const handleSubmit = (e) => {
-    e.preventDefault(); // ✅ Stop page from refreshing
+    e.preventDefault(); 
 
-    // Fake login logic — replace this with real auth later
     if (email && password) {
-      onLogin(email); // ✅ Tells App you're logged in
+      onLogin(email); 
     }
   };
 

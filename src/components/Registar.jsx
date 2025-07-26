@@ -2,14 +2,14 @@
 import React from 'react'
 
 const registar = () => {
-  const [formData, setFormData] = React.useState({username: "", email: "", password: ""});
+  const [formData, setFormData] = React.useState({username: "", email: "", password: ""})
   const handleChange = (e) => {
-    setFormData({...formData, [e.target.name]: e.target.value});
-  };
+    setFormData({...formData, [e.target.name]: e.target.value})
+  }
     const handleSubmit = (e) => {
-    e.preventDefault();
+    e.preventDefault()
     try {
-        alert("user registered successfully");
+        alert("user registered successfully")
     } catch (error) {
         alert("Error registering user")
     }
@@ -22,7 +22,7 @@ const registar = () => {
       <input type="password" name="password" placeholder="Password" onChange={handleChange} />
       <button type="submit">Sign up</button>
     </form>
-  );
-};
+  )
+}
 
-export default registar;
+export default registar

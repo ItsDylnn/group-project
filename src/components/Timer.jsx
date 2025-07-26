@@ -1,37 +1,37 @@
-import React, { useState } from 'react';
+import React, { useState } from 'react'
 
 const Timer = ({ startDate, endDate, dailyRate }) => {
   const calculateDuration = () => {
-    if (!startDate || !endDate) return 0;
-    const start = new Date(startDate);
-    const end = new Date(endDate);
-    const diffTime = Math.abs(end - start);
-    return Math.ceil(diffTime / (1000 * 60 * 60 * 24));
-  };
+    if (!startDate || !endDate) return 0
+    const start = new Date(startDate)
+    const end = new Date(endDate)
+    const diffTime = Math.abs(end - start)
+    return Math.ceil(diffTime / (1000 * 60 * 60 * 24))
+  }
 
   const formatDate = (dateString) => {
-    if (!dateString) return 'Not selected';
-    const date = new Date(dateString);
+    if (!dateString) return 'Not selected'
+    const date = new Date(dateString)
     return date.toLocaleDateString('en-US', { 
       month: 'short', 
       day: 'numeric', 
       year: 'numeric' 
-    });
-  };
+    })
+  }
 
-  const duration = calculateDuration();
-  const totalCost = duration * dailyRate;
+  const duration = calculateDuration()
+  const totalCost = duration * dailyRate
 
-  // Inline styles to ensure visibility
+ 
   const blackTextStyle = { 
     color: '#0f172a', 
     fontWeight: '900' 
-  };
+  }
   
   const whiteTextStyle = { 
     color: '#ffffff', 
     fontWeight: '900' 
-  };
+  }
 
   return (
     <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
@@ -45,7 +45,7 @@ const Timer = ({ startDate, endDate, dailyRate }) => {
       </h3>
 
       <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
-        {/* Date Range Display */}
+     
         <div style={{ 
           backgroundColor: '#e2e8f0', 
           borderRadius: '0.75rem', 
@@ -67,7 +67,7 @@ const Timer = ({ startDate, endDate, dailyRate }) => {
           </div>
         </div>
 
-        {/* Duration */}
+      
         <div style={{ 
           display: 'flex', 
           alignItems: 'center', 
@@ -87,7 +87,7 @@ const Timer = ({ startDate, endDate, dailyRate }) => {
           </span>
         </div>
 
-        {/* Daily Rate */}
+       
         <div style={{ 
           display: 'flex', 
           alignItems: 'center', 
@@ -101,7 +101,7 @@ const Timer = ({ startDate, endDate, dailyRate }) => {
           <span style={{ ...blackTextStyle, fontSize: '1.125rem' }}>${dailyRate}</span>
         </div>
 
-        {/* Calculation Breakdown */}
+      
         {duration > 0 && (
           <div style={{ 
             backgroundColor: '#e2e8f0', 
@@ -127,7 +127,7 @@ const Timer = ({ startDate, endDate, dailyRate }) => {
           </div>
         )}
 
-        {/* Total Cost */}
+       
         <div style={{ position: 'relative' }}>
           <div style={{ 
             background: 'linear-gradient(135deg, #ea580c 0%, #f97316 100%)', 
@@ -157,7 +157,7 @@ const Timer = ({ startDate, endDate, dailyRate }) => {
           </div>
         </div>
 
-        {/* Additional Info */}
+       
         {duration > 0 && (
           <div style={{ 
             backgroundColor: '#bfdbfe', 
@@ -174,7 +174,7 @@ const Timer = ({ startDate, endDate, dailyRate }) => {
         )}
       </div>
 
-      {/* Empty State */}
+   
       {duration === 0 && (
         <div style={{ textAlign: 'center', paddingTop: '2rem', paddingBottom: '2rem' }}>
           <p style={{ ...blackTextStyle, fontSize: '1.125rem' }}>
@@ -183,10 +183,10 @@ const Timer = ({ startDate, endDate, dailyRate }) => {
         </div>
       )}
     </div>
-  );
-};
+  )
+}
 
-// Demo with sample data
+
 export default function App() {
   return (
     <div className="max-w-md mx-auto p-6 bg-white">
@@ -196,5 +196,5 @@ export default function App() {
         dailyRate={1500}
       />
     </div>
-  );
-};
+  )
+}
