@@ -9,7 +9,7 @@ function ChooseCar({ setSelectedCar }) {
 
   const handleCarSelection = (car) => {
     setSelectedCar(car);
-    // Automatically redirect to home page after selecting a car
+    
     navigate('/');
   };
 
@@ -25,13 +25,13 @@ function ChooseCar({ setSelectedCar }) {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-100 via-slate-50 to-gray-50 py-8 relative overflow-hidden">
-      {/* Background decorations */}
+      
       <div className="absolute top-0 left-0 w-96 h-96 bg-gradient-to-r from-orange-200/10 to-slate-200/10 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2"></div>
       <div className="absolute top-1/2 right-0 w-80 h-80 bg-gradient-to-r from-slate-200/15 to-orange-200/15 rounded-full blur-3xl translate-x-1/2"></div>
       <div className="absolute bottom-0 left-1/3 w-72 h-72 bg-gradient-to-r from-orange-200/12 to-slate-300/12 rounded-full blur-3xl translate-y-1/2"></div>
       
       <div className="max-w-7xl mx-auto px-4 relative z-10">
-        {/* Header Section */}
+       
         <div className="text-center mb-12">
           <h1 style={{fontSize: '3rem', fontWeight: '900', color: '#000000', marginBottom: '1rem'}}>
             <span style={{color: '#000000'}}>Choose Your </span>
@@ -42,13 +42,13 @@ function ChooseCar({ setSelectedCar }) {
           <div className="w-24 h-0.5 bg-gradient-to-r from-orange-500 to-orange-600 mx-auto mt-4 rounded-full"></div>
         </div>
 
-        {/* Brand Filter Section */}
+        
         <div className="bg-white/95 backdrop-blur-sm rounded-2xl shadow-lg p-8 mb-10 border border-slate-300 max-w-4xl mx-auto">
           <h3 style={{fontSize: '1.25rem', fontWeight: '900', color: '#000000', marginBottom: '1.5rem', display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
             Select Brand
           </h3>
           
-          {/* Brand Cards Grid */}
+         
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-7 gap-4">
             {brands.map((brand) => (
               <button
@@ -89,7 +89,7 @@ function ChooseCar({ setSelectedCar }) {
             ))}
           </div>
 
-          {/* Selected Brand Info */}
+          
           <div className="mt-6 p-4 bg-gradient-to-r from-slate-100 to-slate-150 rounded-xl border border-slate-300">
             <div className="flex items-center justify-center space-x-2">
               <span style={{fontWeight: '900', color: '#000000'}}>
@@ -99,7 +99,7 @@ function ChooseCar({ setSelectedCar }) {
           </div>
         </div>
 
-        {/* Car API Section */}
+       
         <div className="bg-white/95 backdrop-blur-sm rounded-2xl shadow-lg border border-slate-300 overflow-hidden">
           <div className="p-8">
             <h3 style={{fontSize: '1.25rem', fontWeight: '900', color: '#000000', marginBottom: '1.5rem', display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
@@ -115,7 +115,7 @@ function ChooseCar({ setSelectedCar }) {
           </div>
         </div>
 
-        {/* Footer Info */}
+     
         <div className="text-center mt-12">
           <div className="bg-white/90 backdrop-blur-sm rounded-xl p-6 max-w-2xl mx-auto border border-slate-300">
             <h4 style={{fontWeight: '900', color: '#000000', marginBottom: '0.5rem'}}>🏆 Premium Selection</h4>

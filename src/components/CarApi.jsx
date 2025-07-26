@@ -4,7 +4,6 @@ function CarApi({ brand, onSelectCar }) {
   const [cars, setCars] = useState([]);
   const [loading, setLoading] = useState(true);
 
-  // Enhanced car database with more brands and realistic data
   const carDatabase = {
     ferrari: [
       {
@@ -189,7 +188,6 @@ function CarApi({ brand, onSelectCar }) {
     const loadCars = () => {
       setLoading(true);
 
-      // Simulate API delay
       setTimeout(() => {
         const brandCars = carDatabase[brand] || [];
         setCars(brandCars);
@@ -227,7 +225,6 @@ function CarApi({ brand, onSelectCar }) {
           className="bg-white rounded-2xl border-2 border-orange-300 overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 cursor-pointer transform hover:scale-105"
           onClick={() => onSelectCar({ ...car, dailyRate: car.dailyRate })}
         >
-          {/* Car Image */}
           <div className="relative h-48 bg-gray-200 overflow-hidden">
             <img
               src={car.image}
@@ -242,7 +239,7 @@ function CarApi({ brand, onSelectCar }) {
             </div>
           </div>
 
-          {/* Car Details */}
+        
           <div className="p-6">
             <h3 style={{
               fontSize: '1.25rem',
@@ -262,7 +259,7 @@ function CarApi({ brand, onSelectCar }) {
               {car.class}
             </p>
 
-            {/* Features */}
+            
             <div className="mb-4">
               <div className="flex flex-wrap gap-1">
                 {car.features.slice(0, 2).map((feature, idx) => (
@@ -276,7 +273,7 @@ function CarApi({ brand, onSelectCar }) {
               </div>
             </div>
 
-            {/* Price */}
+            
             <div className="flex items-center justify-between">
               <div>
                 <span style={{

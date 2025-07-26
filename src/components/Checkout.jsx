@@ -63,7 +63,7 @@ const Checkout = ({ onConfirm, totalCost, isLoading }) => {
         Payment Details
       </h3>
       
-      {/* Total Cost Display */}
+      
       <div className="mb-6 p-4 bg-gradient-to-r from-orange-100 to-orange-150 rounded-xl border border-orange-300">
         <div className="flex items-center justify-between">
           <div className="flex items-center space-x-2">
@@ -75,7 +75,7 @@ const Checkout = ({ onConfirm, totalCost, isLoading }) => {
       </div>
 
       <div className="space-y-6">
-        {/* Cardholder Name */}
+        
         <div className="space-y-2">
           <div style={{
             fontSize: '14px', 
@@ -107,7 +107,7 @@ const Checkout = ({ onConfirm, totalCost, isLoading }) => {
           />
         </div>
 
-        {/* Card Number */}
+        
         <div className="space-y-2">
           <div style={{
             fontSize: '14px', 
@@ -141,7 +141,7 @@ const Checkout = ({ onConfirm, totalCost, isLoading }) => {
           />
         </div>
 
-        {/* Expiry Date and CVV */}
+      
         <div className="grid grid-cols-2 gap-4">
           <div className="space-y-2">
             <div style={{
@@ -209,7 +209,7 @@ const Checkout = ({ onConfirm, totalCost, isLoading }) => {
           </div>
         </div>
 
-        {/* Security Notice */}
+        
         <div className="p-3 bg-slate-100 rounded-lg border border-slate-300">
           <div className="flex items-center space-x-2">
             <Lock className="w-4 h-4 text-slate-600" />
@@ -219,7 +219,7 @@ const Checkout = ({ onConfirm, totalCost, isLoading }) => {
           </div>
         </div>
 
-        {/* Submit Button */}
+      
         <button
           onClick={handleSubmit}
           disabled={isLoading || !isFormValid}
